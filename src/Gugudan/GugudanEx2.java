@@ -10,8 +10,8 @@ public class GugudanEx2 {
 		
 		String[] splitedValue = inputValue.split(",");
 		// 두개의 입력값
-		int first = Integer.parseInt(splitedValue[0].strip());
-		int second = Integer.parseInt(splitedValue[1].strip());
+		int first = Integer.parseInt(splitedValue[0]);
+		int second = Integer.parseInt(splitedValue[1]);
 		
 		for(int i = 1; i <= first; i++ ) {
 			for(int j = 1; j <= second; j++) {
