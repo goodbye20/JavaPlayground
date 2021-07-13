@@ -3,10 +3,10 @@ package Calender;
 import java.util.Scanner;
 
 public class MaxMonth3 {
-	private int[] m1 = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	public int[] maxDaysMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 	public int getMaxDaysOfMonth(int month) {
-		return m1[month - 1];
+		return maxDaysMonth[month - 1];
 	}
 
 	public static void main(String[] args) {
