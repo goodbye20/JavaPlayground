@@ -6,14 +6,14 @@ public class GugudanIf {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-			System.out.println("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº? :");	
+			System.out.println("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€? :");	
 			int number = scanner.nextInt();
-			 System.out.println("ÀÔ·Â°ª :" + number);
+			 System.out.println("ì…ë ¥ê°’ :" + number);
 			 
 			if(number < 2) {
-				System.out.println("ÀÔ·Â°ªÀº 2º¸´Ù ÀÛÀ» ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ê°’ì€ 2ë³´ë‹¤ ì‘ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			} else if(number > 9) {
-				System.out.println("ÀÔ·Â°ªÀº 9º¸´Ù Å¬ ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ê°’ì€ 9ë³´ë‹¤ í´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			} else {
 			for(int i = 1; i < 10; i++) {
 				System.out.println(number * i);

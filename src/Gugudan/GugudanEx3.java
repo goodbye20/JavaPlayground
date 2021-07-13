@@ -4,18 +4,18 @@ public class GugudanEx3 {
 	
 
 	    public static void main(String[] args) {
-	        // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ¹®ÀÚ¿­(String)·Î ¹Ş´Â´Ù.
+	        // ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ ë¬¸ìì—´(String)ë¡œ ë°›ëŠ”ë‹¤.
 	        Scanner scanner = new Scanner(System.in);
 	        String inputValue = scanner.nextLine();
 
-	        // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ½°Ç¥(,)¸¦ ±âÁØÀ¸·Î ºĞ¸®ÇÑ´Ù.
+	        // ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ ì‰¼í‘œ(,)ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¶„ë¦¬í•œë‹¤.
 	        String[] splitedValue = inputValue.split(",");
 
-	        // ½°Ç¥¸¦ ±âÁØÀ¸·Î ºĞ¸®ÇÑ ¹®ÀÚ¿­À» ¼ıÀÚ·Î º¯È¯ÇÑ´Ù.
+	        // ì‰¼í‘œë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¶„ë¦¬í•œ ë¬¸ìì—´ì„ ìˆ«ìë¡œ ë³€í™˜í•œë‹¤.
 	        int first = Integer.parseInt(splitedValue[0].strip());
 	        int second = Integer.parseInt(splitedValue[1].strip());
 
-	        // 2ÁßÀ¸·Î ¹İº¹¹®(for ¶Ç´Â while)À» ½ÇÇàÇØ °ö¼À °á°ú¸¦ È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+	        // 2ì¤‘ìœ¼ë¡œ ë°˜ë³µë¬¸(for ë˜ëŠ” while)ì„ ì‹¤í–‰í•´ ê³±ì…ˆ ê²°ê³¼ë¥¼ í™”ë©´ì— ì¶œë ¥í•œë‹¤.
 	        for (int i = 1; i <= first; i++) {
 	            for (int j = 1; j <= second; j++) {
 	                System.out.println( i * j);

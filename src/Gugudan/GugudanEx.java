@@ -3,14 +3,14 @@ package Gugudan;
 import java.util.Scanner;
 
 public class GugudanEx {
-	//ÀÔ·ÂÇÑ°ªÀ¸·Î ÀÔ·ÂÇÑ°ª±îÁö¸¸ ±¸±¸´Ü¸¸µé±â( 88´Ü ¸¸µé±â, 19´Ü¸¸µé±â)
+	//ì…ë ¥í•œê°’ìœ¼ë¡œ ì…ë ¥í•œê°’ê¹Œì§€ë§Œ êµ¬êµ¬ë‹¨ë§Œë“¤ê¸°( 88ë‹¨ ë§Œë“¤ê¸°, 19ë‹¨ë§Œë“¤ê¸°)
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);	
-		System.out.println("³»°¡ ÀÔ·ÂÇÑ °ªÀº :");
-		//³»°¡ ÀÔ·ÂÇÑ°ª
+		System.out.println("ë‚´ê°€ ì…ë ¥í•œ ê°’ì€ :");
+		//ë‚´ê°€ ì…ë ¥í•œê°’
 		int number = scanner.nextInt();
-		System.out.println("ÀÔ·Â°ªÀº :" + number);
+		System.out.println("ì…ë ¥ê°’ì€ :" + number);
 		for(int i = 1; i <= number; i++) {
 			System.out.println(i * number);
 		}

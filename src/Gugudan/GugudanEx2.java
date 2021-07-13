@@ -9,7 +9,7 @@ public class GugudanEx2 {
 		String inputValue = scanner.nextLine();
 		
 		String[] splitedValue = inputValue.split(",");
-		// µÎ°³ÀÇ ÀÔ·Â°ª
+		// ë‘ê°œì˜ ì…ë ¥ê°’
 		int first = Integer.parseInt(splitedValue[0]);
 		int second = Integer.parseInt(splitedValue[1]);
 		
