@@ -2,7 +2,7 @@ package Calender;
 
 import java.util.Scanner;
 
-public class CalenderEx {
+public class CalenderExPratice {
 	private final static String PROMPT1 = "Year> ";
 	private final static String PROMPT2 = "Month> ";
 	static char[] week = {'일', '월', '화', '수', '목', '금', '토', '일'};
@@ -44,6 +44,13 @@ public class CalenderEx {
 			System.out.println("=====================");
 			int m1 = getMaxDaysOfMonth(year,month);
 			int m2 = getLeapMaxDaysOfMonth(year, month);
+// [<<<<여기에 앞에 공백생성하는 메소드가 있어야함>>>>]
+	//그러러면 총 몇년 지나는지 알수있는 메소드
+		//거기에 윤년도 얼마나 끼여있는지 메소드 합해서 더해줘야함
+			//거기 %7 만큼 공백 ++++
+			// 윤년이면 sum +2 평년이면 sum +1 거기에 1853년 1/1일이 토요일이니 +6 이걸 전체 7로 나눠주면 그해 1월1일 요일
+			// 그전달 마지막일수 더해주고 7로 나눠주면 그게 그달 1일의 요일 
+			
 			if(year % 4 == 0 && (year % 100 !=0 || year % 400 == 0)) {
 			for (int i = 1; i <= m2; i++) {
 				System.out.printf("%3d", i);
@@ -68,3 +75,4 @@ public class CalenderEx {
 		scanner.close();
 	}
 }
+
