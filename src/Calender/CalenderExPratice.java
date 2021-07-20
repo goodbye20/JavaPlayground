@@ -2,7 +2,7 @@ package Calender;
 
 import java.util.Scanner;
 
-public class CalenderAuto {
+public class CalenderExPratice {
 	private final static String PROMPT1 = "Year> ";
 	private final static String PROMPT2 = "Month> ";
 	static char[] week = {'일', '월', '화', '수', '목', '금', '토', '일'};
