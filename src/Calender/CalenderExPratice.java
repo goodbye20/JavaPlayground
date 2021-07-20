@@ -16,7 +16,35 @@ public class CalenderExPratice {
 		return leapMaxDays[month - 1];
 	}
 	
-		
+	public static boolean isLeapYear(int year) {
+		if (year % 4 == 0 && (year % 100 !=0 || year % 400 == 0)) {
+		return true;
+	} else {
+		return false;
+	}
+}	
+	private static int getWeekDay(int year, int month, int day) {
+		int syear = 1970;
+		final int STANDARD_WEEKDAY = 3; //1970/Jan/1st = Thursday
+
+		int count = 0;
+
+		for (int i = syear; i < year; i++) {
+			int delta = isLeapYear(i) ? 366 : 365;
+			count += delta;
+		}
+
+		//System.out.println(count);
+		for (int i = 1; i < month; i++) {
+			int delta = getMaxDaysOfMonth(year, i);
+			count += delta;
+		}
+
+		count += day;
+
+		int weekday = (count + STANDARD_WEEKDAY) % 7;
+		return weekday;
+	}	
 	public static void main(String[] args) {
 		
 
@@ -34,6 +62,7 @@ public class CalenderExPratice {
 			int month = scanner.nextInt();
 			System.out.println(PROMPT2 + month);
 			
+			
 			if (month > 12) {
 				System.out.println("입력할수 있는 월은 12월까지 입니다.");
 				System.out.println();
@@ -44,25 +73,34 @@ public class CalenderExPratice {
 			System.out.println("=====================");
 			int m1 = getMaxDaysOfMonth(year,month);
 			int m2 = getLeapMaxDaysOfMonth(year, month);
-// [<<<<여기에 앞에 공백생성하는 메소드가 있어야함>>>>]
-	//그러러면 총 몇년 지나는지 알수있는 메소드
-		//거기에 윤년도 얼마나 끼여있는지 메소드 합해서 더해줘야함
-			//거기 %7 만큼 공백 ++++
-			// 윤년이면 sum +2 평년이면 sum +1 거기에 1853년 1/1일이 토요일이니 +6 이걸 전체 7로 나눠주면 그해 1월1일 요일
-			// 그전달 마지막일수 더해주고 7로 나눠주면 그게 그달 1일의 요일 
 			
-			if(year % 4 == 0 && (year % 100 !=0 || year % 400 == 0)) {
-			for (int i = 1; i <= m2; i++) {
+			
+			int weekfirstday = getWeekDay(year, month, 1); 
+
+			//print blank space - weekfirstday라는 나머지만큼 공백
+			for (int i = 0; i < weekfirstday; i++) {
+				System.out.print("   ");
+			}
+			//print first line - 한 주의 총 일수인 7에서 나머지를 뺴준만큼(count)만 프린트
+			int count = 7 - weekfirstday;
+			for(int i = 1; i <= count; i++) {
 				System.out.printf("%3d", i);
-				if (i % 7 == 0) {
+			}
+			System.out.println();
+			//print second line - last line 
+			//count 다음숫자부터 print
+			if(year % 4 == 0 && (year % 100 !=0 || year % 400 == 0)) {
+			for (int i = count + 1; i <= m2; i++) {
+				System.out.printf("%3d", i);
+				if (i % 7 == count) {             //결국 첫쨰주의 마지막날 즉 count와 줄을 바꿔줘야할 각 토요일의 %7나머지는 같으므로(count) i%7 = count
 					System.out.println();
 				}
 			}
 			System.out.println();
 			} else {
-				for (int i = 1; i <= m1; i++) {
+				for (int i = count + 1; i <= m1; i++) {
 					System.out.printf("%3d", i);
-					if (i % 7 == 0) {
+					if (i % 7 == count) {
 						System.out.println();
 			
 					}
